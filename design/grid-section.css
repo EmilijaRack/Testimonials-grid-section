@@ -1,0 +1,127 @@
+*{
+    box-sizing: border-box;
+}
+
+body {
+    display: grid;
+    height: 98vh;
+    background-color: hsl(210, 46%, 95%);
+    font-size: 13px;
+    align-items: center;
+    justify-items: center;
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.main {
+    margin: 0px;
+    width: 75%;
+    height: 70%;
+    display: grid;
+    gap: 2em;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    justify-content: center;
+}
+
+.purple-box {
+    background-color: hsl(263, 55%, 52%);
+    color: hsl(0, 0%, 100%);
+    grid-column-end: span 2;
+}
+
+.gray-box {
+    background-color: hsl(217, 19%, 35%);
+    color: hsl(0, 0%, 100%);
+}
+
+.blue-box {
+    background-color: hsl(219, 29%, 14%);
+    color: hsl(0, 0%, 100%);
+    grid-column-end: span 2;
+}
+
+.right {
+    background-color: hsl(0, 0%, 100%);
+    grid-area: 1 / 4 / 3 / 4;
+}
+
+.white-box {
+    background-color: hsl(0, 0%, 100%);
+}
+
+.profiles {
+    border-radius: 50px;
+    border: 2px solid hsl(263, 65%, 69%);
+    width: 30px;
+}
+
+.user {
+    display: grid;
+    grid-template-columns: 50px 100px;
+    align-items: center;
+}
+
+.styling {
+    border-radius: 10px;
+    padding: 2em;
+    filter: drop-shadow(10px 20px 20px hsl(0, 0%, 81%));
+}
+
+.info > :first-child {
+    font-weight: 600;
+    margin: 0;
+}
+
+.info > :last-child {
+    opacity: 50%;
+    margin: 0;
+}
+
+.desc {
+    opacity: 70%;
+}
+
+p {
+    margin: 0;
+}
+
+.icon {
+    position: absolute;
+    z-index: -1;
+    right: 40px;
+    top: 0;
+}
+
+@media screen and (max-width: 375px){
+    body {
+        align-items: start;
+        margin-top: 50px;
+        height: 100%;
+        margin-bottom: 50px;
+    }
+
+    .main {
+        width: 100%;
+        height: 100%;
+        gap: 1.5em;
+        max-width: 90%;
+        grid-template-columns: 1fr;
+    }
+
+    .styling {
+        display: grid;
+        align-self: center;
+        justify-self: center;
+        width: 100%;
+        padding: 2.5em;
+    }
+
+    .purple-box, .blue-box, .right {
+        grid-area: auto;
+    }
+
+    .icon {
+        right: 20px;
+    }
+}
